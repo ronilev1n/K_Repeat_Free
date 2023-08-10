@@ -27,8 +27,11 @@ Enc 2: this block is responsible for maintaining the uniqueness of the suffix ma
 Once Enc 2 finds the pattern somewhere in the string that is not the end of the string, it deletes the 〖log_2〗⁡〖(n)+1〗  ‘o’’s, which are all the bits of the suffix marker sequence accept the first one, and adds its binary address from the right along with a marker ‘1’ to enable the decoder to identify the two distinct types of eliminations.
 Note this process does not change the length of the string.
 Enc 3: since each iteration shortens the string by one bit and there is no way of predetermining how many operations Enc 1 will perform, in order to have a uniform length output addition of bits to the end of the string is required. This process of expansion must not create repetitions, the additional bits are meaningless and therefore will be decarded in the first stage of the decoding, the decoder recognizes which part to discard using the suffix marker which is why we have Enc2.
+
 **The decoder:** 
+
 ![image](https://github.com/ronilev1n/K_Repeat_Free/assets/141573619/5e9e5e42-24da-4875-b1ad-71a8edbc7182)
+
 I chose to divide the encoder into two main parts, each in charge of reversing the corresponding part of the encoder, Dec 1 in charge of reversing the operations made by Enc 1 i.e., the elimination of repeated k windows, similarly, Dec 2 is in charge of reversing the operations made by Enc 2 i.e., the elimination of suffix marker prior to the one added at the first stage of encoding.
 In order to correctly reverse all encoding operations, the decoder must operate in the opposite order to the encoder, therefore the first operation to reverse will be that of Enc3. 
  As I explained in the section on the encoder the suffix marker’s purpose is to allow the decoder to differentiate between the part of the string that contains relevant data, and the rest which is meaningless and was only added during expansion in Enc 3 to maintain a fixed output length.
@@ -79,7 +82,11 @@ In case the requirement is not met a warning notice is outputted to the interfac
 Input type: digital file (user provides the path)
 output: digital file 
 
-Full process (Encoding + Decoding + Tests):
+**Full process (Encoding + Decoding + Tests)**:
+
+![image](https://github.com/ronilev1n/K_Repeat_Free/assets/141573619/f788a829-e95c-45b7-9acc-151b5414b798)
+
+
 Input type: user chooses between file upload (user provides a path) and random sequence (user provides the desired length of sequence)
 Encoders search algorithm: users can choose between three of the fastest algorithms I tested for the implementation of the encoder the options are as follows:
 	the default dynamic R.K hash
