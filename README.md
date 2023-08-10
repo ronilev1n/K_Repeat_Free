@@ -66,9 +66,14 @@ The program supports three types of operations:
 ![image](https://github.com/ronilev1n/K_Repeat_Free/assets/141573619/4894d75f-b935-49ab-8b64-efb4f48cea8d)
 
 input type: digital file (user provides the path)
+
 Encoders search algorithm: dynamic Rabin Karp hash 
+
 Output: encoded sequence of size length(binary(file)) +2 or a digital file
+
 Additional options: in case the sequencing technology is known in advance users can input the nominal minimal read length given in the sequencers spec to make sure the length of repetition is such that the encoding will provide the desired effect.
+
+**'reads' length restriction**
 Generally, in this scheme, the size of repetitions, K, is linked to the size of the input sequence. 
 k=2(log_2⁡〖(n)+1〗 )
 And for the assembly to be performed with no ambiguities **γ_min≥k+1**
@@ -80,6 +85,7 @@ In case the requirement is not met a warning notice is outputted to the interfac
 ![image](https://github.com/ronilev1n/K_Repeat_Free/assets/141573619/01291b8d-69e2-4e35-92b6-a2108544110a)
 
 Input type: digital file (user provides the path)
+
 output: digital file 
 
 **Full process (Encoding + Decoding + Tests)**:
