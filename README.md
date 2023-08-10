@@ -98,6 +98,7 @@ Encoders search algorithm: users can choose between three of the fastest algorit
 	the default dynamic R.K hash
 	the original algorithm which I constructed specifically for this type of search (will elaborate further in a later section)
 	the Boyer-Moore search algorithm 
+ 
 output: runtime analysis, Bit Error Rate
 
 **search algorithm:**
