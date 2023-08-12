@@ -32,7 +32,8 @@ Enc 3: since each iteration shortens the string by one bit and there is no way o
 
 **The decoder:** 
 
-![image](https://github.com/ronilev1n/K_Repeat_Free/assets/141573619/5e9e5e42-24da-4875-b1ad-71a8edbc7182)
+![image](https://github.com/ronilev1n/K_Repeat_Free/assets/141573619/a5105e76-64a5-442b-89c9-4343278ab9bb)
+
 
 I chose to divide the encoder into two main parts, each in charge of reversing the corresponding part of the encoder, Dec 1 is in charge of reversing the operations made by Enc 1 i.e., the elimination of repeated k windows, similarly, Dec 2 is in charge of reversing the operations made by Enc 2 i.e., the elimination of suffix marker prior to the one added at the first stage of encoding.
 In order to correctly reverse all encoding operations, the decoder must operate in the opposite order to the encoder, therefore the first operation to reverse will be that of Enc3. 
@@ -65,7 +66,8 @@ The program supports three types of operations:
 
 **Encoding** only:
 
-![image](https://github.com/ronilev1n/K_Repeat_Free/assets/141573619/4894d75f-b935-49ab-8b64-efb4f48cea8d)
+![image](https://github.com/ronilev1n/K_Repeat_Free/assets/141573619/105dda66-f1ca-47f8-9ca8-a1c57a71baff)
+
 
 input type: digital file (user provides the path)
 
@@ -76,6 +78,7 @@ Output: encoded sequence of size length(binary(file)) +2 or a digital file
 Additional options: in case the sequencing technology is known in advance users can input the nominal minimal read length given in the sequencers spec to make sure the length of repetition is such that the encoding will provide the desired effect.
 
 **'reads' length restriction**
+
 Generally, in this scheme, the size of repetitions, K, is linked to the size of the input sequence. 
 k=2(log_2⁡〖(n)+1〗 )
 And for the assembly to be performed with no ambiguities **γ_min≥k+1**
@@ -84,7 +87,9 @@ Note n in the above calculation includes the two-bit redundancy (n= length(binar
 In case the requirement is not met a warning notice is outputted to the interface.
 
 **Decoding** only:
-![image](https://github.com/ronilev1n/K_Repeat_Free/assets/141573619/01291b8d-69e2-4e35-92b6-a2108544110a)
+
+![image](https://github.com/ronilev1n/K_Repeat_Free/assets/141573619/b0d40c1c-e3b3-4f9b-a118-3567b9bfa70b)
+
 
 Input type: digital file (user provides the path)
 
@@ -92,7 +97,8 @@ output: digital file
 
 **Full process (Encoding + Decoding + Tests)**:
 
-![image](https://github.com/ronilev1n/K_Repeat_Free/assets/141573619/f788a829-e95c-45b7-9acc-151b5414b798)
+![image](https://github.com/ronilev1n/K_Repeat_Free/assets/141573619/f6bc78e4-116b-4e8e-860b-44da03657b70)
+
 
 
 Input type: user chooses between file upload (user provides a path) and random sequence (user provides the desired length of sequence)
