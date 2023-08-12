@@ -13,7 +13,9 @@ In applications for digital information storage, we can encode the data to a k-r
 
 **The Encoding and Decoding algorithms, block diagrams, and a short explanation:**
 **The encoder**:
-![image](https://github.com/ronilev1n/K_Repeat_Free/assets/141573619/8fecade4-754d-4aab-81e2-3a857d581110)
+
+
+![image](https://github.com/ronilev1n/K_Repeat_Free/assets/141573619/f9422aaf-b7fa-4b95-98f4-d6b8e521b653)
 
 I chose to divide the encoder into three main parts each in charge of a process specified in the algorithm.
  the original string is first padded on both ends by markers, the prefix marker is a single bit ‘0’, the suffix-marker is ‘1’ followed by   〖log_2〗⁡〖(n)+1〗 ‘0’’s. This padded string is fed to Enc 1 block.
